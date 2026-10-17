@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>David O Levita - Portal Oficial</title>
+  <meta name="description" content="Artigos, e-books, aulas e conteúdos exclusivos sobre música, clarinete e desenvolvimento pessoal.">
+  
+  <!-- Estilos CSS Incorporados -->
+  <style>
+    :root {
+      --primary-navy: #0A192F;
+      --secondary-gold: #D4AF37;
+      --dark-bg: #030712;
+      --light-text: #F8FAFC;
+      --gray-text: #94A3B8;
+      --card-bg: #1E293B;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--dark-bg);
+      color: var(--light-text);
+      line-height: 1.6;
+    }
+
+    /* Cabeçalho e Navegação */
+    header {
+      background-color: var(--primary-navy);
+      border-bottom: 2px solid var(--secondary-gold);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--secondary-gold);
+      text-decoration: none;
+    }
+
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+
+    .nav-menu a {
+      color: var(--light-text);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-menu a:hover {
+      color: var(--secondary-gold);
+    }
+
+    /* Layout Principal em Grid */
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: 2.5fr 1fr;
+      gap: 2rem;
+    }
+
+    /* Banners AdSense */
+    .adsense-container {
+      background: rgba(212, 175, 55, 0.05);
+      border: 1px dashed var(--secondary-gold);
+      padding: 1rem;
+      text-align: center;
+      color: var(--gray-text);
+      font-size: 0.85rem;
+      margin: 1.5rem 0;
+      border-radius: 8px;
+    }
+
+    /* Seções e Cards de Conteúdo */
+    .section-title {
+      font-size: 1.5rem;
+      color: var(--secondary-gold);
+      margin-bottom: 1rem;
+      border-left: 4px solid var(--secondary-gold);
+      padding-left: 0.5rem;
+    }
+
+    .posts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .post-card {
+      background-color: var(--card-bg);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .post-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .post-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .post-content {
+      padding: 1rem;
+    }
+
+    .post-title {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: var(--light-text);
+    }
+
+    .post-excerpt {
+      font-size: 0.9rem;
+      color: var(--gray-text);
+      margin-bottom: 1rem;
+    }
+
+    .btn-read {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background-color: var(--secondary-gold);
+      color: var(--primary-navy);
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    /* Sidebar / Lateral */
+    aside {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .widget {
+      background-color: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* Rodapé */
+    footer {
+      background-color: var(--primary-navy);
+      border-top: 1px solid rgba(212, 175, 55, 0.3);
+      padding: 2rem 0;
+      margin-top: 4rem;
+      text-align: center;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      list-style: none;
+      margin-bottom: 1rem;
+    }
+
+    .footer-links a {
+      color: var(--gray-text);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--secondary-gold);
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+      .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho com Menu -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">David O Levita</a>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="#artigos">Artigos</a></li>
+          <li><a href="#ebooks">E-books</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Anúncio AdSense Topo (Header Leaderboard) -->
+  <div class="nav-container">
+    <div class="adsense-container" style="width: 100%;">
+      <!-- Insira o código da unidade do AdSense aqui (ex: Display - Horizontal) -->
+      <p>[ Anúncio Google AdSense - Topo ]</p>
+    </div>
+  </div>
+
+  <!-- Conteúdo Principal e Sidebar -->
+  <div class="container">
+    <main>
+      <h2 class="section-title" id="artigos">Últimas Publicações</h2>
+      
+      <div class="posts-grid">
+        <!-- Post 1 -->
+        <article class="post-card">
+          <div class="post-content">
+            <h3 class="post-title">Técnicas Essenciais de Clarinete para Iniciantes</h3>
+            <p class="post-excerpt">Aprenda a afinação, embocadura e controle de respiração para evoluir na prática musical...</p>
+            <a href="#" class="btn-read">Ler Artigo</a>
+          </div>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="post-card">
+          <div class="post-content">
+            <h3 class="post-title">Como Organizar sua Rotina de Estudos Musicais</h3>
+            <p class="post-excerpt">Descubra como otimizar seu tempo e obter resultados consistentes nos exercícios diários...</p>
+            <a href="#" class="btn-read">Ler Artigo</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- Anúncio AdSense Meio do Conteúdo (In-Feed) -->
+      <div class="adsense-container">
+        <!-- Insira o código da unidade do AdSense aqui (ex: In-feed) -->
+        <p>[ Anúncio Google AdSense - In-Feed ]</p>
+      </div>
+
+    </main>
+
+    <!-- Lateral (Sidebar) -->
+    <aside>
+      <!-- Widget de Produtos / Destaques -->
+      <div class="widget" id="ebooks">
+        <h3 class="section-title">E-books & Materiais</h3>
+        <p style="font-size: 0.9rem; color: var(--gray-text); margin-bottom: 1rem;">
+          Conheça nossos materiais completos de estudo e e-books exclusivos na Hotmart.
+        </p>
+        <a href="#" class="btn-read" style="display: block; text-align: center;">Ver Materiais</a>
+      </div>
+
+      <!-- Anúncio AdSense Lateral (Sidebar Banner) -->
+      <div class="adsense-container">
+        <!-- Insira o código da unidade do AdSense aqui (ex: Retângulo / Skyscraper) -->
+        <p>[ Anúncio Google AdSense - Lateral ]</p>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Rodapé Opcional / Links Legais -->
+  <footer>
+    <ul class="footer-links">
+      <li><a href="politica-de-privacidade.html">Política de Privacidade</a></li>
+      <li><a href="termos-de-uso.html">Termos de Uso</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+    <p style="font-size: 0.8rem; color: var(--gray-text);">
+      &copy; 2026 David O Levita - Todos os direitos reservados.
+    </p>
+  </footer>
+
+</body>
+</html>
